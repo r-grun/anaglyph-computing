@@ -32,8 +32,8 @@ def copy_images(src_dir, dest_dir, pbar):
 
 
 # Define the source and destination directories
-src_dir = "E:/Programming/HAW/Grundprojekt/stereOBJ1M/images_annotations"
-dest_dir = "E:/Programming/HAW/Grundprojekt/anaglyph-computing/data"
+src_dir = "E:\\Programming\\HAW\\Grundprojekt\\stereOBJ1M\\images_annotations"
+dest_dir = "E:\\Programming\\HAW\\Grundprojekt\\anaglyph-computing\\data"
 
 # Get the total number of .png files in the source directory
 total_files = sum([len(files) for r, d, files in os.walk(src_dir) if any(f.endswith('.jpg') for f in files)])
