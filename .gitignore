@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 
 data/*
+/colorization_end_to_end_checkpoint_0160.pt.pt_checkpoint_0160
