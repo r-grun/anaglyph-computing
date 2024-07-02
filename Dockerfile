@@ -5,7 +5,11 @@ COPY . data
 WORKDIR data
 
 RUN pip install --no-cache-dir -r requirements.txt
-RUN python ./conditional_INNs/colorization_cINN/setup.py build_ext --inplace
+
+WORKDIR ./conditional_INNs/colorization_cINN
+RUN python setup.py build_ext --inplace
+
+WORKDIR data
 
 EXPOSE 8888
 
