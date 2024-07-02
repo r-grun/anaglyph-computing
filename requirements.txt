@@ -7,3 +7,5 @@ scikit-image==0.22.0
 scipy==1.13.1
 tqdm==4.66.4
 jupyter
+Cython
+distutils
