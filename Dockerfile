@@ -6,6 +6,7 @@ WORKDIR data
 
 RUN apt update && apt install -y libsm6 libxext6
 RUN apt-get install -y libxrender-dev
+RUN apt-get install -y libxrender1 libfontconfig1
 
 RUN pip install --no-cache-dir -r requirements.txt
 
