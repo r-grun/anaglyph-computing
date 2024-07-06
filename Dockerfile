@@ -4,7 +4,8 @@ COPY . data
 
 WORKDIR data
 
-RUN apt-get update && apt install -y libsm6 libxext6
+RUN apt-get update -y
+RUN apt-get install -y libsm6 libxext6
 RUN apt-get install -y libxrender-dev
 RUN apt-get install -y libxrender1 libfontconfig1
 
