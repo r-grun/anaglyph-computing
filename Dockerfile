@@ -4,6 +4,9 @@ COPY . data
 
 WORKDIR data
 
+RUN apt update && apt install -y libsm6 libxext6
+RUN apt-get install -y libxrender-dev
+
 RUN pip install --no-cache-dir -r requirements.txt
 
 WORKDIR ./conditional_INNs/colorization_cINN
