@@ -9,7 +9,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 WORKDIR ./conditional_INNs/colorization_cINN
 RUN python setup.py build_ext --inplace
 
-WORKDIR data
+WORKDIR ./data
 
 EXPOSE 8888
 
