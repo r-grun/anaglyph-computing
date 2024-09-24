@@ -7,9 +7,7 @@ WORKDIR data
 RUN echo "Acquire::Check-Valid-Until \"false\";\nAcquire::Check-Date \"false\";" | cat > /etc/apt/apt.conf.d/10no--check-valid-until
 
 RUN apt-get update && apt-get install -y apt-transport-https
-RUN apt-get install -y libsm6 libxext6
-RUN apt-get install -y libxrender-dev
-RUN apt-get install -y libxrender1 libfontconfig1
+RUN apt-get install -y libsm6 libxext6 libxrender-dev libxrender1 libfontconfig1 ffmpeg
 
 RUN pip install --no-cache-dir -r requirements.txt
 
