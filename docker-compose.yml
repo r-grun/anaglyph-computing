@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  anaglyph:
+    build:
+      # build from Dockerfile
+      context: ./Path
+      dockerfile: Dockerfile
+    ports:
+      - "88888:8888"
+    volumes:
+      - /mnt/data/robin_grun/:/workspace

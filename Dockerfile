@@ -1,8 +1,8 @@
 FROM pytorch/pytorch:2.3.0-cuda12.1-cudnn8-devel
 
-COPY . /workspace
+#COPY . /workspace
 
-WORKDIR /workspace
+WORKDIR /workspace/anaglyph_computing
 
 RUN echo "Acquire::Check-Valid-Until \"false\";\nAcquire::Check-Date \"false\";" | cat > /etc/apt/apt.conf.d/10no--check-valid-until
 
@@ -15,7 +15,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 WORKDIR ./conditional_INNs/colorization_cINN
 RUN python setup.py build_ext --inplace
 
-WORKDIR /workspace
+WORKDIR /workspace/anaglyph_computing
 
 EXPOSE 8888
 
