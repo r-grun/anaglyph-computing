@@ -14,5 +14,10 @@ services:
     ports:
       - "8889:8888"
     restart: no
-    command: > 
-      /bin/bash -c "cd /workspace/copy/anaglyph_computing/conditional_INNs/colorization_cINN && python setup.py build_ext --inplace && cd /workspace/anaglyph_computing/ && jupyter notebook --ip=0.0.0.0 --port=8889 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password=''"
+    command:
+      - /bin/bash
+      - -c
+      - |
+        cd /workspace/copy/anaglyph_computing/conditional_INNs/colorization_cINN
+        python setup.py build_ext --inplace && cd /workspace/anaglyph_computing/
+        jupyter notebook --ip=0.0.0.0 --port=8889 --no-browser --allow-root
