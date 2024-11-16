@@ -8,12 +8,16 @@ services:
           devices:
             - driver: nvidia
               count: 1
-              capabilities: [gpu]
+              capabilities: [ gpu ]
     volumes:
       - /mnt/data/robin_grun/:/workspace
     ports:
-      - "8889:8888"
+      - "8889:8889"
+    expose:
+      - "8889"
     restart: no
+    networks:
+      - anaglyph_network
     command:
       - /bin/bash
       - -c
@@ -21,3 +25,6 @@ services:
         cd /workspace/copy/anaglyph_computing/conditional_INNs/colorization_cINN
         python setup.py build_ext --inplace && cd /workspace/anaglyph_computing/
         jupyter notebook --ip=0.0.0.0 --port=8889 --no-browser --allow-root
+networks:
+  anaglyph_network:
+    driver: bridge
