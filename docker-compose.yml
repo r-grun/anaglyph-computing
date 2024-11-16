@@ -1,5 +1,6 @@
 services:
   anaglyph:
+    container_name: anaglyph_container
     build: .
     runtime: nvidia
     deploy:
