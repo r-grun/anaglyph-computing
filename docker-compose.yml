@@ -12,7 +12,7 @@ services:
     volumes:
       - /mnt/data/robin_grun/:/workspace
     ports:
-      - "8889:8889"
+      - 8889
     restart: no
     networks:
       - anaglyph_network
