@@ -11,7 +11,7 @@ services:
               count: 1
               capabilities: [ gpu ]
     volumes:
-      - /mnt/data/robin_grun/:/workspace
+      - /mnt/data/robin_grun/data/:/workspace/data/
     ports:
       - 8889
     restart: no
