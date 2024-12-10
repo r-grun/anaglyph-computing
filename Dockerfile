@@ -9,8 +9,8 @@ RUN echo "Acquire::Check-Valid-Until \"false\";\nAcquire::Check-Date \"false\";"
 RUN apt-get update && apt-get install -y apt-transport-https
 RUN apt-get install git -y
 RUN apt-get install -y libsm6 libxext6 libxrender-dev libxrender1 libfontconfig1 ffmpeg
-RUN pip install notebook
-#RUN pip install --no-cache-dir -r requirements.txt
+
+RUN pip install --no-cache-dir -r requirements.txt
 
 #WORKDIR ./conditional_INNs/colorization_cINN
 # RUN python setup.py build_ext --inplace
