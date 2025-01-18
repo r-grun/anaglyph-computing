@@ -25,9 +25,9 @@ def filter_csv(input_csv, output_txt, target_label):
         print(f"An unexpected error occurred: {e}")
 
 # Paths and target labels
-input_csv = '/workspace/data/train.csv'
-anaglyph_output = '/workspace/data/train_anaglyphs.txt'
-reversed_output = '/workspace/data/train_reversed.txt'
+input_csv = '/home/jovyan/data/test.csv'
+anaglyph_output = '/home/jovyan/data/test_anaglyphs.txt'
+reversed_output = '/home/jovyan/data/test_reversed.txt'
 
 # Filter rows and create the output files
 filter_csv(input_csv, anaglyph_output, 'anaglyph')
