@@ -1,3 +1,6 @@
 [submodule "conditional_INNs"]
 	path = conditional_INNs
 	url = https://github.com/r-grun/conditional_INNs.git
+[submodule "FrEIA"]
+	path = FrEIA
+	url = https://github.com/r-grun/FrEIA.git
